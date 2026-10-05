@@ -52,6 +52,7 @@ body {
     padding: 1rem 1.25rem;
     max-width: 1200px;
     margin: 0 auto;
+    position: relative;
 }
 
 .logo {
@@ -61,7 +62,6 @@ body {
     text-decoration: none;
 }
 
-/* Навигация — скрыта на мобильном */
 .nav {
     display: none;
     flex-direction: column;
@@ -90,7 +90,6 @@ body {
     opacity: 0.75;
 }
 
-/* Кнопка-бургер */
 .burger {
     display: flex;
     flex-direction: column;
@@ -160,7 +159,7 @@ body {
 }
 
 /* ============================================
-   FEATURES — Flexbox
+   FEATURES
    ============================================ */
 .features {
     display: flex;
@@ -190,7 +189,7 @@ body {
    ============================================ */
 .container {
     display: grid;
-    grid-template-columns: 1fr;        /* mobile-first: 1 колонка */
+    grid-template-columns: 1fr;
     gap: 1rem;
     padding: 2rem 1.25rem;
     max-width: 1200px;
@@ -227,7 +226,7 @@ body {
 }
 
 /* ============================================
-   FOOTER — Flexbox
+   FOOTER
    ============================================ */
 .site-footer {
     display: flex;
@@ -269,37 +268,32 @@ body {
    АДАПТАЦИЯ
    ============================================ */
 
-/* Большие телефоны и маленькие планшеты: 576px+ */
+/* 576px+ */
 @media (min-width: 576px) {
     .container {
         grid-template-columns: repeat(2, 1fr);
     }
-
     .features {
         flex-direction: row;
     }
-
     .site-footer {
         flex-direction: row;
         flex-wrap: wrap;
         justify-content: space-between;
     }
-
     .footer-col {
         flex: 1 1 200px;
     }
 }
 
-/* Планшеты: 768px+ */
+/* 768px+ */
 @media (min-width: 768px) {
     .header-inner {
         padding: 1rem 2rem;
     }
-
     .burger {
-        display: none;      /* прячем бургер на планшетах и ПК */
+        display: none;
     }
-
     .nav {
         display: flex;
         flex-direction: row;
@@ -308,24 +302,21 @@ body {
         padding: 0;
         gap: 1.5rem;
     }
-
     .hero {
         padding: 5rem 2rem;
     }
-
     .container {
         grid-template-columns: repeat(2, 1fr);
         padding: 2.5rem 2rem;
         gap: 1.5rem;
     }
-
     .features {
         padding: 3rem 2rem;
         gap: 1.5rem;
     }
 }
 
-/* ПК: 992px+ */
+/* 992px+ */
 @media (min-width: 992px) {
     .container {
         grid-template-columns: repeat(3, 1fr);
@@ -333,14 +324,14 @@ body {
     }
 }
 
-/* Большие экраны: 1200px+ */
+/* 1200px+ */
 @media (min-width: 1200px) {
     .hero h1 {
         font-size: 3.25rem;
     }
 }
 
-/* Пользователь предпочитает уменьшенную анимацию */
+/* Уважение к настройкам пользователя */
 @media (prefers-reduced-motion: reduce) {
     * {
         transition: none !important;
