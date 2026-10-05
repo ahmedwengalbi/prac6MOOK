@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Учебный адаптивный сайт с Grid, Flexbox и Media Queries">
+    <title>Адаптивный сайт</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- ===== Шапка с навигацией ===== -->
+    <header class="site-header">
+        <div class="header-inner">
+            <a href="#" class="logo">🌐 MySite</a>
+
+            <button class="burger" aria-label="Открыть меню" aria-expanded="false">
+                <span></span><span></span><span></span>
+            </button>
+
+            <nav class="nav" id="nav">
+                <a href="#home">Главная</a>
+                <a href="#features">Возможности</a>
+                <a href="#cards">Карточки</a>
+                <a href="#contacts">Контакты</a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- ===== Hero-секция ===== -->
+    <section class="hero" id="home">
+        <h1>Мой адаптивный сайт</h1>
+        <p>Учимся делать вёрстку, которая работает на любом устройстве</p>
+        <a href="#cards" class="btn">Смотреть карточки</a>
+    </section>
+
+    <!-- ===== Секция с преимуществами ===== -->
+    <section class="features" id="features">
+        <div class="feature">
+            <div class="feature-icon">📱</div>
+            <h3>Мобильный</h3>
+            <p>Отлично выглядит на телефоне</p>
+        </div>
+        <div class="feature">
+            <div class="feature-icon">💻</div>
+            <h3>Планшет</h3>
+            <p>Адаптируется под средние экраны</p>
+        </div>
+        <div class="feature">
+            <div class="feature-icon">🖥️</div>
+            <h3>Десктоп</h3>
+            <p>Использует всю ширину экрана</p>
+        </div>
+    </section>
+
+    <!-- ===== Сетка с карточками ===== -->
+    <main class="container" id="cards">
+        <article class="card">
+            <div class="card-icon">🚀</div>
+            <h3>Карточка 1</h3>
+            <p>Быстрая адаптация под любой экран.</p>
+        </article>
+        <article class="card">
+            <div class="card-icon">🎨</div>
+            <h3>Карточка 2</h3>
+            <p>Гибкая сетка на CSS Grid.</p>
+        </article>
+        <article class="card">
+            <div class="card-icon">⚡</div>
+            <h3>Карточка 3</h3>
+            <p>Плавные медиа-запросы.</p>
+        </article>
+        <article class="card">
+            <div class="card-icon">📐</div>
+            <h3>Карточка 4</h3>
+            <p>Используем fr, vw, vh и clamp.</p>
+        </article>
+        <article class="card">
+            <div class="card-icon">🧩</div>
+            <h3>Карточка 5</h3>
+            <p>Flexbox и Grid в одном проекте.</p>
+        </article>
+        <article class="card">
+            <div class="card-icon">✅</div>
+            <h3>Карточка 6</h3>
+            <p>Доступность и семантика.</p>
+        </article>
+    </main>
+
+    <!-- ===== Подвал ===== -->
+    <footer class="site-footer" id="contacts">
+        <div class="footer-col">
+            <h4>MySite</h4>
+            <p>Учебный проект по адаптивной вёрстке</p>
+        </div>
+        <div class="footer-col">
+            <h4>Ссылки</h4>
+            <a href="#home">Главная</a>
+            <a href="#features">Возможности</a>
+            <a href="#cards">Карточки</a>
+        </div>
+        <div class="footer-col">
+            <h4>Контакты</h4>
+            <p>email@example.com</p>
+            <p>+7 (000) 000-00-00</p>
+        </div>
+        <p class="copyright">© 2025 Учебный проект. Все права защищены.</p>
+    </footer>
+
+    <!-- ===== Скрипт для бургер-меню ===== -->
+    <script>
+        const burger = document.querySelector('.burger');
+        const nav = document.querySelector('#nav');
+        burger.addEventListener('click', () => {
+            const opened = nav.classList.toggle('open');
+            burger.setAttribute('aria-expanded', opened);
+            burger.classList.toggle('active');
+        });
+    </script>
+</body>
+</html>
